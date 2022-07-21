@@ -1,0 +1,22 @@
+.hero {
+/*     background-image: url("data:image/svg+xml,%3Csvg width='1440' height='604' viewBox='0 0 1440 604' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1_2)'%3E%3Cpath d='M1450.71 158.923L1344.13 138.206L1323.42 244.782L1429.99 265.499L1450.71 158.923Z' fill='%2318EC59' fill-opacity='0.47'/%3E%3Cpath d='M1110.76 625.426L1273.43 599.662L1247.66 437L1085 462.763L1110.76 625.426Z' fill='%2318EC59' fill-opacity='0.47'/%3E%3Cpath d='M894.259 234.632L998.632 174.372L938.372 70L834 130.259L894.259 234.632Z' fill='%2318EC59' fill-opacity='0.47'/%3E%3Cpath d='M196.959 382L128 511.694L257.694 580.653L326.653 450.959L196.959 382Z' fill='%2318EC59' fill-opacity='0.47'/%3E%3Cpath d='M9.78265 -48L-111 72.7827L9.78265 193.565L130.565 72.7827L9.78265 -48Z' fill='%2318EC59' fill-opacity='0.47'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1_2'%3E%3Crect width='1440' height='604' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+    background-size: cover; */
+  @apply flex min-h-screen;
+
+  &-grid {
+    @apply grid grid-cols-1 md:grid-cols-3 w-full items-center;
+    
+    &_image {
+      @apply m-auto max-w-sm;
+    }
+
+    &_title {
+      @apply md:col-span-2 text-center;
+
+      #name {
+        position: relative;
+        text-shadow: -7px -7px 0 #000000;
+       }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@import 'fonts';
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Dosis-Light';
+  font-size: x-large;
+  @apply text-slate-50 bg-slate-800; 
+}

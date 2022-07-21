@@ -1,0 +1,8 @@
+.p-grid {
+  @apply grid grid-cols-1 sm:grid-cols-3 gap-8 py-8 px-4;
+
+  &_box {
+    @apply bg-slate-700 rounded-md p-3;
+    min-height: 10rem;
+  }
+}
