@@ -1,4 +1,4 @@
-import FullPageContainer from "./common/FullPageContainer";
+import FullPageContainer from "../components/FullPageContainer";
 import Memoji from '../assets/img/memoji_rodolfo.png';
 import "./Hero.scss"
 
@@ -8,7 +8,7 @@ function Hero() {
       <div className="hero">
         <div className="hero-grid">
           <div className="hero-grid_image">
-            <img className="" src={Memoji} alt="Emoji of my face" />
+            <img src={Memoji} alt="Emoji of my face" />
           </div>
           <div className="hero-grid_title">
             <h1 className="text-6xl reiju">

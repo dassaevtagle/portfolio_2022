@@ -1,69 +1,62 @@
-import { ReactNode } from "react";
-import FullPageContainer from "./common/FullPageContainer"
-import './Projects.scss'
+import FullPageContainer from "../components/FullPageContainer"
+import { Box, Grid } from "../components/Grid"
 
-type BoxProps = {
-  rows?: number;
-  columns?: number;
-  children: ReactNode;
-}
-
-//Rows and columns will span only after lg breakpoint.
-function Box({rows = 1, columns = 1, children}: BoxProps) {
-  const classes = `p-grid_box lg:col-span-${columns} lg:row-span-${rows}`
-  return (
-    <div className={classes}>
-      {children}
-    </div>
-  )
-}
+import TorreTest from '../assets/img/torre-test.png'
+import TodoApp from '../assets/img/todo-app.png'
+import Restaurant from '../assets/img/restaurant-app.png'
+import FancyTails from '../assets/img/fancytails.png'
+import CostCalculator from '../assets/img/cost-calculator.png'
 
 type Project = {
-  url: string;
+  image: string;
   name: string;
-  columns?: number;
-  rows?: number;
+  lgColumn?: boolean;
+  lgRow?: boolean;
 }
 
 function Projects() {
   const projectsCollection: Project[] = [
     {
-      url: '../assets/img/cost-calculator.png',
+      image: CostCalculator,
       name: 'Cost calculator',
-      columns: 2  
+      lgColumn: true 
     },
     {
       name: 'Torre test application',
-      url: '../assets/img/torre-test.png',
-      rows: 2
+      image: TorreTest,
+      lgRow:true
     },
     {
       name: 'Fancy Tails (Pet grooming)',
-      url: '../assets/img/fancytails.png',
-      rows: 2
+      image: FancyTails,
+      lgRow: true
     },
     {
       name: 'Todo list',
-      url: '../assets/img/fancytails.png',
+      image: TodoApp
     },
     {
       name: 'Restaurant app',
-      url: '../assets/img/restaurant-app.png'
+      image: Restaurant
     },
     {
       name: 'More on Github...',
-      url: '.../fakeurl'
+      image: FancyTails
     }
   ]
   return (
     <FullPageContainer>
-      <div className="p-grid">
+      <Grid>
         {
-          projectsCollection.map(({url, name, columns, rows}) => (
-            <Box columns={columns} rows={rows}>{name}</Box>
+          projectsCollection.map(({image, name, lgColumn, lgRow}) => (
+            <Box lgColumn={lgColumn} lgRow={lgRow}>
+              <div style={{background: `url('${image}') top center`, height: '100%'}}>
+                {name}
+              </div>
+            </Box>
           ))
         }
-      </div>
+      </Grid>
     </FullPageContainer>
   )
 }
