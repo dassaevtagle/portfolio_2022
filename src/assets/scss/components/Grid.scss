@@ -2,7 +2,7 @@
   @apply grid grid-cols-1 sm:grid-cols-3 gap-4 py-8 px-4;
 
   &_box {
-    @apply bg-slate-700 rounded-md text-black;
+    @apply bg-slate-700 text-black;
     min-height: 11rem;
   }
 }
