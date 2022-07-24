@@ -5,7 +5,7 @@ import './Hero.scss'
 function Hero () {
   return (
     <FullPageContainer>
-      <div className="hero" style={{backgroundImage: `url(${Background})`}}>
+      <section className="hero" style={{backgroundImage: `url(${Background})`}}>
         <h2 className="hero-greeting reiju">
           Hello! I'm
           <br/>
@@ -14,11 +14,12 @@ function Hero () {
           </span>
         </h2>
         <h3 className="hero-intro">
-          Software developer by day, pianist by night.
+          Software <span className="text-highlight">developer </span>
+          by day, <span className="text-highlight"> pianist </span>by night.
           <br/>
           I enjoy working on the front-end. Lifetime learner.
         </h3>
-      </div>
+      </section>
     </FullPageContainer>
   )
 }
