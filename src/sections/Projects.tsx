@@ -1,5 +1,6 @@
 import FullPageContainer from "../components/FullPageContainer"
 import { Box, Grid } from "../components/Grid"
+import Title from "../components/Title"
 
 import TorreTest from '../assets/img/torre-test.png'
 import TodoApp from '../assets/img/todo-app.png'
@@ -48,13 +49,12 @@ function Projects() {
   ]
   return (
     <FullPageContainer>
-      <h1 className="text-4xl mb-8 text-center projects-title"><span className="text-highlight">P</span>ROJECTS</h1>
+      <Title>Projects</Title>
       <Grid>
         {
           projectsCollection.map(({name, image, lgColumn, lgRow}) => (
             <Box lgColumn={lgColumn} lgRow={lgRow}>
               <div className="projects-box">
-                {/* <img className="object-cover" src={image} alt="alt" /> */}
               </div>
             </Box>
           ))

@@ -4,8 +4,8 @@ function Header() {
   return (
     <>
       <div className="h-wrapper reiju">
+        <div className="uppercase">About</div>
         <div className="uppercase">Projects</div>
-        <div className="uppercase">CV</div>
         <div className="uppercase">Contact</div>
       </div>
     </>

@@ -5,7 +5,8 @@ module.exports = {
   theme: {    
     extend: {
       colors: {
-        'highlight': '#18EC59',
+        //If you change this you need to change the CSS variable declared in index.scss as well.
+        'highlight': '#18EC59', 
       },
     },
   },
