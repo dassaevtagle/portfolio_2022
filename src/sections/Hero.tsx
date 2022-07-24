@@ -1,12 +1,13 @@
-import FullPageContainer from "../components/FullPageContainer";
+import FullPageContainer from "../components/FullPageContainer"
+import Background from '../assets/svg/background.svg'
 import './Hero.scss'
 
 function Hero () {
   return (
     <FullPageContainer>
-      <div className="hero">
+      <div className="hero" style={{backgroundImage: `url(${Background})`}}>
         <h2 className="hero-greeting reiju">
-          Hi there! I'm
+          Hello! I'm
           <br/>
           <span className="hero-greeting_name">
             Dassaev Tagle
