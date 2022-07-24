@@ -1,5 +1,5 @@
 import React from "react";
-import "./FullPageContainer.scss"
+import '../assets/scss/components/FullPageContainer.scss';
 
 function FullPageContainer({children} : {children: React.ReactNode})  {
   return <div className="fp-container">{children}</div>

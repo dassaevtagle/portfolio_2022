@@ -1,4 +1,4 @@
-import './Title.scss'
+import '../assets/scss/components/Title.scss';
 
 type TitleProps = {
   children: string;

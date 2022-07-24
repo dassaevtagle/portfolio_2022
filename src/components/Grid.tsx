@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import './Grid.scss'
+import '../assets/scss/components/Grid.scss';
 
 /** 
  * 3-columns grid component.

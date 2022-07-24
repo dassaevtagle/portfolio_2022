@@ -8,7 +8,7 @@ import Restaurant from '../assets/img/restaurant-app.png'
 import FancyTails from '../assets/img/fancytails.png'
 import CostCalculator from '../assets/img/cost-calculator.png'
 
-import './Projects.scss'
+import '../assets/scss/sections/Projects.scss';
 
 type Project = {
   image: string;

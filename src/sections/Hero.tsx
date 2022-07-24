@@ -1,6 +1,6 @@
 import FullPageContainer from "../components/FullPageContainer"
 import Background from '../assets/svg/background.svg'
-import './Hero.scss'
+import '../assets/scss/sections/Hero.scss';
 
 function Hero () {
   return (
