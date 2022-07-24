@@ -13,9 +13,9 @@
     &_title {
       @apply md:col-span-2 text-center;
 
-      #name {
-        position: relative;
+      &-highlight {
         text-shadow: -7px -7px 0 #000000;
+        @apply relative text-highlight text-8xl;
       }
     }
   }

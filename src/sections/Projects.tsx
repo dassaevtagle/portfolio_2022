@@ -7,6 +7,8 @@ import Restaurant from '../assets/img/restaurant-app.png'
 import FancyTails from '../assets/img/fancytails.png'
 import CostCalculator from '../assets/img/cost-calculator.png'
 
+import './Projects.scss'
+
 type Project = {
   image: string;
   name: string;
@@ -19,39 +21,40 @@ function Projects() {
     {
       image: CostCalculator,
       name: 'Cost calculator',
-      lgColumn: true 
+      lgColumn: true,
     },
     {
       name: 'Torre test application',
       image: TorreTest,
-      lgRow:true
+      lgRow: true,
     },
     {
       name: 'Fancy Tails (Pet grooming)',
       image: FancyTails,
-      lgRow: true
     },
     {
       name: 'Todo list',
-      image: TodoApp
+      image: TodoApp,
+      lgRow: true,
     },
     {
       name: 'Restaurant app',
-      image: Restaurant
+      image: Restaurant,
     },
     {
       name: 'More on Github...',
-      image: FancyTails
+      image: FancyTails,
     }
   ]
   return (
     <FullPageContainer>
+      <h1 className="text-4xl mb-8 text-center projects-title"><span className="text-highlight">P</span>ROJECTS</h1>
       <Grid>
         {
-          projectsCollection.map(({image, name, lgColumn, lgRow}) => (
+          projectsCollection.map(({name, image, lgColumn, lgRow}) => (
             <Box lgColumn={lgColumn} lgRow={lgRow}>
-              <div style={{background: `url('${image}') top center`, height: '100%'}}>
-                {name}
+              <div className="projects-box">
+                {/* <img className="object-cover" src={image} alt="alt" /> */}
               </div>
             </Box>
           ))

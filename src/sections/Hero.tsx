@@ -14,14 +14,11 @@ function Hero() {
             <h1 className="text-6xl reiju">
               Hey there! I'm
               <br/>
-              <div className="inline-flex text-8xl">
-                <span style={{color: '#18EC59'}} id="name">
-                  Dassaev Tagle
-                </span>
-              </div>
-
+              <span className="hero-grid_title-highlight">
+                Dassaev Tagle
+              </span>
             </h1>
-            <h2 className="mt-4">
+            <h2 className="mt-2">
               Software developer by day, pianist by night.
               <br/>
               I enjoy working on the front-end. Lifetime learner.
