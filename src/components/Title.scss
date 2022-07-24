@@ -1,5 +1,5 @@
 .title {
-  @apply text-4xl mb-8 text-center;
+  @apply text-4xl mb-8 text-center uppercase;
   &:first-letter {
     @apply text-highlight;
   }

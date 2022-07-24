@@ -1,22 +1,23 @@
 .hero {
-/*     background-image: url("data:image/svg+xml,%3Csvg width='1440' height='604' viewBox='0 0 1440 604' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1_2)'%3E%3Cpath d='M1450.71 158.923L1344.13 138.206L1323.42 244.782L1429.99 265.499L1450.71 158.923Z' fill='%2318EC59' fill-opacity='0.47'/%3E%3Cpath d='M1110.76 625.426L1273.43 599.662L1247.66 437L1085 462.763L1110.76 625.426Z' fill='%2318EC59' fill-opacity='0.47'/%3E%3Cpath d='M894.259 234.632L998.632 174.372L938.372 70L834 130.259L894.259 234.632Z' fill='%2318EC59' fill-opacity='0.47'/%3E%3Cpath d='M196.959 382L128 511.694L257.694 580.653L326.653 450.959L196.959 382Z' fill='%2318EC59' fill-opacity='0.47'/%3E%3Cpath d='M9.78265 -48L-111 72.7827L9.78265 193.565L130.565 72.7827L9.78265 -48Z' fill='%2318EC59' fill-opacity='0.47'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1_2'%3E%3Crect width='1440' height='604' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
-    background-size: cover; */
-  @apply flex min-h-screen;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1014%26quot%3b)' fill='none'%3e%3cpath d='M658.45 52.12a44.62 44.62 0 1 0 88.34-12.7z' stroke='rgba(24%2c 236%2c 89%2c 0.5)'%3e%3c/path%3e%3cpath d='M1225.46 49.58a50.61 50.61 0 1 0-83.45-57.29z' stroke='rgba(24%2c 236%2c 89%2c 0.5)'%3e%3c/path%3e%3cpath d='M452.2 468.38 a23.27 23.27 0 1 0 46.54 0 a23.27 23.27 0 1 0 -46.54 0z' stroke='rgba(24%2c 236%2c 89%2c 0.5)'%3e%3c/path%3e%3cpath d='M338.02 465.38L358.37 465.38L358.37 485.73L338.02 485.73z' stroke='rgba(24%2c 236%2c 89%2c 0.5)'%3e%3c/path%3e%3cpath d='M401.4 32.23a33.05 33.05 0 1 0-35.02-56.07z' fill='rgba(24%2c 236%2c 89%2c 0.5)'%3e%3c/path%3e%3cpath d='M430.16 322.05L450.51 322.05L450.51 342.4L430.16 342.4z' fill='rgba(24%2c 236%2c 89%2c 0.5)'%3e%3c/path%3e%3cpath d='M352.99 290.01L403.07 290.01L403.07 292.21L352.99 292.21z' stroke='rgba(24%2c 236%2c 89%2c 0.5)'%3e%3c/path%3e%3cpath d='M622.93 38.87a13.63 13.63 0 1 0-26.91 4.34z' fill='rgba(24%2c 236%2c 89%2c 0.5)'%3e%3c/path%3e%3cpath d='M462.1 254.31a30.57 30.57 0 1 0-20.51-57.6z' stroke='rgba(24%2c 236%2c 89%2c 0.5)'%3e%3c/path%3e%3cpath d='M138.85 154.81a42.32 42.32 0 1 0 83.26 15.21z' stroke='rgba(24%2c 236%2c 89%2c 0.5)'%3e%3c/path%3e%3cpath d='M1063.89 49.63a53.68 53.68 0 1 0 58.73 89.87z' fill='rgba(24%2c 236%2c 89%2c 0.5)'%3e%3c/path%3e%3cpath d='M785.5 75.01a12.22 12.22 0 1 0 22.86 8.66z' stroke='rgba(24%2c 236%2c 89%2c 0.5)'%3e%3c/path%3e%3cpath d='M51.69 320.66 a50.81 50.81 0 1 0 101.62 0 a50.81 50.81 0 1 0 -101.62 0z' stroke='rgba(24%2c 236%2c 89%2c 0.5)'%3e%3c/path%3e%3cpath d='M164.48 312.81 a47.43 47.43 0 1 0 94.86 0 a47.43 47.43 0 1 0 -94.86 0z' stroke='rgba(24%2c 236%2c 89%2c 0.5)'%3e%3c/path%3e%3cpath d='M534.49 119.69L578.57 119.69L578.57 163.77L534.49 163.77z' stroke='rgba(24%2c 236%2c 89%2c 0.5)'%3e%3c/path%3e%3cpath d='M799.09 396.6 a42.48 42.48 0 1 0 84.96 0 a42.48 42.48 0 1 0 -84.96 0z' stroke='rgba(24%2c 236%2c 89%2c 0.5)'%3e%3c/path%3e%3cpath d='M203.86 561.22a55.84 55.84 0 1 0-106.82-32.59z' fill='rgba(24%2c 236%2c 89%2c 0.5)'%3e%3c/path%3e%3cpath d='M1045.73 33.88 a16.98 16.98 0 1 0 33.96 0 a16.98 16.98 0 1 0 -33.96 0z' fill='rgba(24%2c 236%2c 89%2c 0.5)'%3e%3c/path%3e%3cpath d='M1013.37 290.24L1059.38 290.24L1059.38 310.36L1013.37 310.36z' stroke='rgba(24%2c 236%2c 89%2c 0.5)'%3e%3c/path%3e%3cpath d='M850.53 549.46a32.84 32.84 0 1 0 9.82-64.95z' stroke='rgba(24%2c 236%2c 89%2c 0.5)'%3e%3c/path%3e%3cpath d='M298.15 209.66L326.25 209.66L326.25 237.76L298.15 237.76z' stroke='rgba(24%2c 236%2c 89%2c 0.5)'%3e%3c/path%3e%3cpath d='M419.89 446.74 a48.3 48.3 0 1 0 96.6 0 a48.3 48.3 0 1 0 -96.6 0z' fill='rgba(24%2c 236%2c 89%2c 0.5)'%3e%3c/path%3e%3cpath d='M589.79 236.57L604.33 236.57L604.33 280.81L589.79 280.81z' fill='rgba(24%2c 236%2c 89%2c 0.5)'%3e%3c/path%3e%3cpath d='M760.32 104.41L773.48 104.41L773.48 150.12L760.32 150.12z' fill='rgba(24%2c 236%2c 89%2c 0.5)'%3e%3c/path%3e%3cpath d='M1133.58 3.89L1165.02 3.89L1165.02 19.68L1133.58 19.68z' fill='rgba(24%2c 236%2c 89%2c 0.5)'%3e%3c/path%3e%3cpath d='M1289.7 183.88a30.34 30.34 0 1 0-59.35 12.63z' fill='rgba(24%2c 236%2c 89%2c 0.5)'%3e%3c/path%3e%3cpath d='M618.01 285.02 a37.17 37.17 0 1 0 74.34 0 a37.17 37.17 0 1 0 -74.34 0z' stroke='rgba(24%2c 236%2c 89%2c 0.5)'%3e%3c/path%3e%3cpath d='M260.04 199.27a13.45 13.45 0 1 0-24.24-11.67z' stroke='rgba(24%2c 236%2c 89%2c 0.5)'%3e%3c/path%3e%3cpath d='M398.61 191.09a4.52 4.52 0 1 0-5.04-7.5z' fill='rgba(24%2c 236%2c 89%2c 0.5)'%3e%3c/path%3e%3cpath d='M1377.12 545.07L1388.61 545.07L1388.61 599.69L1377.12 599.69z' stroke='rgba(24%2c 236%2c 89%2c 0.5)'%3e%3c/path%3e%3cpath d='M274.03 107.26L283.68 107.26L283.68 116.91L274.03 116.91z' stroke='rgba(24%2c 236%2c 89%2c 0.5)'%3e%3c/path%3e%3cpath d='M723.25 240.16L773.61 240.16L773.61 275.72L723.25 275.72z' stroke='rgba(24%2c 236%2c 89%2c 0.5)'%3e%3c/path%3e%3cpath d='M-8.91 357.63 a39.88 39.88 0 1 0 79.76 0 a39.88 39.88 0 1 0 -79.76 0z' stroke='rgba(24%2c 236%2c 89%2c 0.5)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1014'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+  background-size: cover;
+  @apply h-screen grid grid-cols-1 lg:grid-cols-2 place-content-center lg:place-content-stretch px-6 lg:px-2;
+  
+  //lg breakpoint!
+  @media (min-width: 1024px) {
+    grid-template-columns: 60% 40%;
+  }
 
-  &-grid {
-    @apply grid grid-cols-1 md:grid-cols-3 w-full items-center;
-    
-    &_image {
-      @apply m-auto max-w-sm;
+  &-greeting {
+    @apply my-auto text-slate-300 text-5xl sm:text-7xl;
+
+    &_name {
+      text-shadow: -9px 8px 0 #000000;
+      @apply relative flex text-slate-50 text-8xl sm:text-9xl;
     }
+  }
 
-    &_title {
-      @apply md:col-span-2 text-center;
-
-      &-highlight {
-        text-shadow: -7px -7px 0 #000000;
-        @apply relative text-highlight text-8xl;
-      }
-    }
+  &-intro {
+    @apply lg:mb-20 mt-10 lg:mt-auto  text-slate-200 font-medium ;
   }
 }

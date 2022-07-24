@@ -1,33 +1,25 @@
 import FullPageContainer from "../components/FullPageContainer";
-import Memoji from '../assets/img/memoji_rodolfo.png';
-import "./Hero.scss"
+import './Hero.scss'
 
-function Hero() {
+function Hero () {
   return (
     <FullPageContainer>
       <div className="hero">
-        <div className="hero-grid">
-          <div className="hero-grid_image">
-            <img src={Memoji} alt="Emoji of my face" />
-          </div>
-          <div className="hero-grid_title">
-            <h1 className="text-6xl reiju">
-              Hey there! I'm
-              <br/>
-              <span className="hero-grid_title-highlight">
-                Dassaev Tagle
-              </span>
-            </h1>
-            <h2 className="mt-2">
-              Software developer by day, pianist by night.
-              <br/>
-              I enjoy working on the front-end. Lifetime learner.
-            </h2>
-          </div>
-        </div>
+        <h2 className="hero-greeting reiju">
+          Hi there! I'm
+          <br/>
+          <span className="hero-greeting_name">
+            Dassaev Tagle
+          </span>
+        </h2>
+        <h3 className="hero-intro">
+          Software developer by day, pianist by night.
+          <br/>
+          I enjoy working on the front-end. Lifetime learner.
+        </h3>
       </div>
     </FullPageContainer>
-  );
+  )
 }
 
 export default Hero;
