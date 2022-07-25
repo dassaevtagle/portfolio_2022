@@ -1,7 +1,8 @@
 import FullPageContainer from "../components/FullPageContainer"
 import Title from "../components/Title"
-import ProfileBlack from "../assets/img/profile-black.jpg"
-import ProfileWhite from "../assets/img/profile-white.jpg"
+import ProfileBlack from "../assets/img/memoji_rodolfo.png"
+
+import '../assets/scss/sections/About.scss';
 
 function About () {
   return (
@@ -25,7 +26,7 @@ function About () {
           
         </div>
         <div className="sm:w-1/3">
-          <img src={ProfileBlack} alt="Me" className="rounded" />
+          <img src={ProfileBlack} alt="Me" className="rounded image" />
         </div>
       </section>
     </FullPageContainer>
