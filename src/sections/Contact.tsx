@@ -1,21 +1,25 @@
 import Title from "../components/Title"
+import {ReactComponent as CodepenIcon} from "../assets/svg/icons/codepen.svg"
+import {ReactComponent as GithubIcon} from "../assets/svg/icons/github.svg"
+import {ReactComponent as LinkedinIcon} from "../assets/svg/icons/linkedin.svg"
+
+import "../assets/scss/sections/Contact.scss"
 
 function Contact () {
   return (
-    <>
-      <div className="bg-zinc-900 pb-20 pt-10 mt-36 rounded-t-3xl">
+    <section>
+      <div className="contact">
         <Title marginTop={false}>Contact</Title>
-        <h1 className="text-3xl text-center mb-12 mt-20">
-          Feel free to write me at <a className="outline">dassaev.tagle@gmail.com</a>
+        <h1 className="contact-mail">
+          Feel free to write me at <a className="underline" href="mailto:dassaev.tagle@gmail.com">dassaev.tagle@gmail.com</a>
         </h1>
-        <ul className="flex justify-center gap-x-16 pt-15">
-          <li>LI</li>
-          <li>CP</li>
-          <li>HR</li>
-          <li>GI</li>
+        <ul className="contact-social">
+          <li><LinkedinIcon /></li>
+          <li><CodepenIcon /></li>
+          <li><GithubIcon /></li>
         </ul>
       </div>
-    </>
+    </section>
   )
 }
 
