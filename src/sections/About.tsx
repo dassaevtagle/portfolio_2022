@@ -8,9 +8,43 @@ function About () {
   return (
     <FullPageContainer>
       <Title>About me</Title>
-      <section className="md:flex md:flex-row-reverse px-4 md:px-20 py-12 px-8">
-        <div className="md:w-1/3">
+      <div className="about-grid">
+        <div className="about-grid_description">
+          <p>
+            Hey! I'm Rodolfo Dassaev Tagle, a Software Engineer who loves front-end development.
+            <br/>
+            I started to learn programming back in 2019 when I found about The Odin Project,
+            since then I've worked as a Fullstack developer using technologies such as .NET, Scala and Node.js.
+            <br/>
+            Currently I focus on mastering my skills in JavaScript and TypeScript.
+            <br/>
+            <div>
+              These are some technologies I've been using recently:
+              <div>
+                <ul className="grid grid-cols-3 gap-2">
+                  <li>React</li>
+                  <li>Vue</li>
+                  <li>Node</li>
+                  <li>Typescript</li>
+                  <li>Tailwind</li>
+                  <li>Sass</li>
+                </ul>
+              </div> 
+            </div>
+          </p>
+        </div>
+        <div className="about-grid_memoji">
           <img src={ProfileBlack} alt="Me" className="rounded image" />
+        </div>
+        <div className="about-grid_resume">
+          <a
+            className="rounded p-2 border-solid border-2 hover:border-highlight hover:text-highlight"
+            href="https://drive.google.com/file/d/1LxeepIkH6VVdJ8SxOMem-RHj03PUii4p/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+            Resumé
+          </a>
+        </div>
+      </div>
+      {/*
           <div>
             <ul className="grid grid-cols-3 gap-2">
               <li>React</li>
@@ -20,27 +54,8 @@ function About () {
               <li>Tailwind</li>
               <li>Sass</li>
             </ul>
-          </div>
-        </div>
-        <div className="md:w-2/3 font-extralight text-gray-50">
-          <p>
-            Lorem ipsum dolor sit amet,
-            consectetur adipisicing elit. 
-            Ex alias fugiat animi! Veritatis enim possimus
-            reprehenderit quia mollitia minima ullam eius ut nostrum harum!
-            Odit ullam eum voluptates omnis repellendus.
-            Lorem ipsum dolor sit amet,
-            consectetur adipisicing elit. 
-            Ex alias fugiat animi! Veritatis enim possimus
-            reprehenderit quia mollitia minima ullam eius ut nostrum harum!
-            Lorem ipsum dolor sit amet,
-            consectetur adipisicing elit. 
-            Ex alias fugiat animi! Veritatis enim possimus
-            reprehenderit quia mollitia minima ullam eius ut nostrum harum!
-          </p>
-          <a href="a" className="underline rounded p-2 hover:bg-highlight hover:text-black relative top-12">Resumé</a>
-        </div>
-      </section>
+          </div> 
+      */}
     </FullPageContainer>
   )
 }

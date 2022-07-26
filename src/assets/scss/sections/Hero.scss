@@ -17,6 +17,10 @@
   }
 
   &-intro {
-    @apply lg:mb-20 mt-10 lg:mt-auto  text-slate-200 font-medium ;
+    @apply lg:mb-20 mt-10 lg:mt-auto  text-slate-200 font-medium;
+
+    span {
+      @apply text-highlight;
+    }
   }
 }

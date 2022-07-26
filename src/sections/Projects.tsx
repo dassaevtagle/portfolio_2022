@@ -50,16 +50,18 @@ function Projects() {
   return (
     <FullPageContainer>
       <Title>Projects</Title>
-      <Grid>
-        {
-          projectsCollection.map(({name, image, lgColumn, lgRow}) => (
-            <Box lgColumn={lgColumn} lgRow={lgRow}>
-              <div className="projects-box">
-              </div>
-            </Box>
-          ))
-        }
-      </Grid>
+      <div className="mt-9">
+        <Grid>
+          {
+            projectsCollection.map(({name, image, lgColumn, lgRow}, i) => (
+              <Box lgColumn={lgColumn} lgRow={lgRow} key={i}>
+                <div className="projects-box">
+                </div>
+              </Box>
+            ))
+          }
+        </Grid>
+      </div>
     </FullPageContainer>
   )
 }
