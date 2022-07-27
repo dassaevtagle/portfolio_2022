@@ -1,8 +1,48 @@
+$hover-transition: .2s ease;
+
 .grid-component {
-  @apply grid grid-cols-1 sm:grid-cols-3 gap-4 py-8 px-4;
+  @apply grid grid-cols-1 sm:grid-cols-3 gap-y-8 sm:gap-4 py-8 px-4 mt-9;
 
   &_box {
-    @apply bg-slate-700 rounded-md text-black;
+    @apply rounded-md overflow-hidden bg-cover;
+    filter: grayscale(0.3);
+    transition: $hover-transition;
     min-height: 11rem;
+    
+    &:hover {
+      transform: scale(1.05);
+      z-index: 1;
+      filter: grayscale(0);
+    }
+
+    .overlay {
+      position: relative;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      transition: $hover-transition;
+      box-shadow: inset 0px 0px 9px#b0b0b0;
+      background: linear-gradient(145deg, #1b2535, #27334a);
+  
+      &:hover {
+        opacity: 1;
+      }
+  
+      &_text {
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        text-align: center;
+        @apply text-white font-bold;
+      }
+    }
   }
 }

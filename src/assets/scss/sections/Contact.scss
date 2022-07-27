@@ -6,7 +6,7 @@
   }
 
   &-social {
-    @apply flex justify-center gap-x-16 pt-14;
+    @apply flex justify-center gap-x-10 md:gap-x-16 pt-14;
 
     li {
       @apply hover:text-highlight;
