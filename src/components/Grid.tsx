@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { CSSProperties, ReactNode } from "react";
 import '../assets/scss/components/Grid.scss';
 
 /** 
@@ -10,6 +10,7 @@ function Grid ({children}: {children: ReactNode}) {
 }
 
 type BoxProps = {
+  image?: string;
   lgRow?: boolean;
   lgColumn?: boolean;
   children: ReactNode;
@@ -18,10 +19,16 @@ type BoxProps = {
 /** 
  *lgRows and lgColumns will span 2 places and only after lg breakpoint. 
 */
-function Box({lgRow = false, lgColumn = false, children}: BoxProps) {
+function Box({image, lgRow = false, lgColumn = false, children}: BoxProps) {
   const boxClass = generateBoxClass(lgColumn, lgRow);
+  const styles: CSSProperties = image ? {
+    backgroundImage: `url(${image})`,
+    backgroundSize: 'cover',
+    filter: 'grayscale(0.8)',
+  } : {};
+
   return (
-    <div className={boxClass}>
+    <div className={boxClass} style={styles}>
       {children}
     </div>
   )
@@ -29,10 +36,10 @@ function Box({lgRow = false, lgColumn = false, children}: BoxProps) {
 
 function generateBoxClass(lgColumn: boolean, lgRow: boolean): string {
   const safeClassList = [
-    'grid-component_box',
-    'grid-component_box lg:col-span-2',
-    'grid-component_box lg:row-span-2',
-    'grid-component_box lg:col-span-2 lg:row-span-2',
+    'hover:shadow-md hover:shadow-highlight grid-component_box',
+    'hover:shadow-md hover:shadow-highlight grid-component_box lg:col-span-2',
+    'hover:shadow-md hover:shadow-highlight grid-component_box lg:row-span-2',
+    'hover:shadow-md hover:shadow-highlight grid-component_box lg:col-span-2 lg:row-span-2',
   ]
   let className = safeClassList[0]
   if(lgColumn && !lgRow) className = safeClassList[1]

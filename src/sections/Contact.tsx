@@ -12,7 +12,7 @@ function Contact () {
       <div className="contact">
         <Title>Contact</Title>
         <h1 className="contact-mail">
-          Feel free to write me at <a className="underline" href="mailto:dassaev.tagle@gmail.com">dassaev.tagle@gmail.com</a>
+          Feel free to write me at <a className="hover:underline" href="mailto:dassaev.tagle@gmail.com">dassaev.tagle@gmail.com</a>
         </h1>
         <ul className="contact-social">
           <li><LinkedinIcon /></li>

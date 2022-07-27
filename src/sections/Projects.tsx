@@ -8,8 +8,6 @@ import Restaurant from '../assets/img/restaurant-app.png'
 import FancyTails from '../assets/img/fancytails.png'
 import CostCalculator from '../assets/img/cost-calculator.png'
 
-import '../assets/scss/sections/Projects.scss';
-
 type Project = {
   image: string;
   name: string;
@@ -54,9 +52,7 @@ function Projects() {
         <Grid>
           {
             projectsCollection.map(({name, image, lgColumn, lgRow}, i) => (
-              <Box lgColumn={lgColumn} lgRow={lgRow} key={i}>
-                <div className="projects-box">
-                </div>
+              <Box key={i} image={image} lgColumn={lgColumn} lgRow={lgRow}>
               </Box>
             ))
           }
