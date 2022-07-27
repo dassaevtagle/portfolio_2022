@@ -1,8 +1,8 @@
 .contact {
-  @apply bg-zinc-900 py-10 mt-36 rounded-t-3xl md:w-11/12 mx-auto;
+  @apply bg-zinc-900 py-10 mt-36 rounded-t-3xl md:w-9/12 mx-auto;
   
   &-mail {
-    @apply text-3xl text-center mb-4 mt-20;
+    @apply text-3xl text-center mb-4 mt-20 font-light text-3xl;
   }
 
   &-social {

@@ -1,23 +1,27 @@
 .about-grid {
-  @apply grid grid-cols-12 grid-rows-2 mt-24;
+  @apply grid px-14 grid-cols-1 lg:grid-cols-12 lg:grid-rows-2 items-center mt-16;
   grid-template-rows: auto;
 
   &_description {
-    @apply justify-center col-start-2 col-span-7;
+    @apply justify-center lg:col-start-2 lg:col-span-7;
   }
 
   &_memoji {
-    @apply justify-center col-span-3;
+    @apply justify-center m-auto lg:col-span-3;
   }
   
   &_resume {
-    @apply row-start-2 col-start-2;
+    @apply lg:row-start-2 lg:col-start-8 lg:col-span-5 m-auto;
   }
-}
 
-.image {
-  &:hover {
-  filter: none;
-  box-shadow: none;
+  &_tech {
+    @apply text-xl lg:row-start-2 lg:col-start-2 lg:col-span-5 text-gray-400 mb-14 lg:mb-0 mx-auto;
+
+    .tech-container {
+      background: linear-gradient(145deg, #1b2535, #202c3f);
+      box-shadow:  20px 20px 60px #1a2332,
+              -20px -20px 60px #232f44;
+      @apply rounded-xl mt-6 w-fit text-gray-100 mx-auto;
+    }
   }
 }
