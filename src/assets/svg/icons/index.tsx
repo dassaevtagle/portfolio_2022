@@ -1,0 +1,5 @@
+export { ReactComponent as CodepenIcon } from './codepen.svg'
+export { ReactComponent as ExternalIcon } from './external.svg'
+export { ReactComponent as GithubIcon } from './github.svg'
+export { ReactComponent as LinkedinIcon } from './linkedin.svg'
+export { ReactComponent as UpworkIcon } from './upwork.svg'

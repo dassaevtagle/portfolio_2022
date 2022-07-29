@@ -1,7 +1,6 @@
-import { CSSProperties, ReactNode } from "react";
-import {ReactComponent as GithubIcon} from "../assets/svg/icons/github.svg"
-import {ReactComponent as ExternalIcon} from "../assets/svg/icons/external.svg"
+import { CSSProperties, MouseEventHandler, ReactNode } from "react";
 import ExternalLink from "./ExternalLink";
+import Icon from "./Icon";
 import '../assets/scss/components/Grid.scss';
 
 /** 
@@ -19,33 +18,34 @@ type BoxProps = {
   demoUrl?: string;
   lgRow?: boolean;
   lgColumn?: boolean;
+  onClick?: MouseEventHandler;
   children?: ReactNode;
 }
 
 /** 
  *lgRows and lgColumns will span 2 places and only after lg breakpoint. 
 */
-function Box({name, image, sourceUrl, demoUrl, lgRow = false, lgColumn = false, children}: BoxProps) {
+function Box({name, image, sourceUrl, demoUrl, lgRow = false, lgColumn = false, onClick, children}: BoxProps) {
   const boxClass = generateBoxClass(lgColumn, lgRow);
   const styleBgImage: CSSProperties = image ? {
     backgroundImage: `url(${image})`,
   } : {};
 
   return (
-    <div className={boxClass} style={styleBgImage}>
+    <div className={boxClass} style={styleBgImage} onClick={onClick}>
       <div className="overlay">
         <div className="relative float-right">
           <div className="inline-flex gap-x-4 m-6 text-highlight">
             {
               sourceUrl &&
               <ExternalLink href={sourceUrl}>
-                <GithubIcon/>
+                <Icon name="Github"/>
               </ExternalLink>
             }
             {
               demoUrl &&
               <ExternalLink href={demoUrl}>
-                <ExternalIcon/>
+                <Icon name="External"/>
               </ExternalLink>
             }
           </div>

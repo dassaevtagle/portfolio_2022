@@ -1,6 +1,8 @@
 import FullPageContainer from "../components/FullPageContainer"
 import { Box, Grid } from "../components/Grid"
+import { useRef } from "react"
 import Title from "../components/Title"
+import Lightbox, { LightboxHandle } from "../components/Lightbox"
 
 import TorreTest from '../assets/img/torre-test.png'
 import TodoApp from '../assets/img/todo-app.png'
@@ -11,7 +13,7 @@ import Portfolio2021 from '../assets/img/portfolio-2021.png'
 
 import '../assets/scss/sections/Projects.scss';
 
-type Project = {
+export type Project = {
   image: string;
   name: string;
   sourceUrl?: string;
@@ -60,16 +62,28 @@ function Projects() {
       demoUrl: 'http://dassaev-tagle-portfolio.herokuapp.com/',
     },
   ]
+
+
+  const lightboxRef = useRef<LightboxHandle>(null);
+
+  const openLightBox = (i: number) => {
+    if (lightboxRef.current) {
+      lightboxRef.current.openLightbox(i);
+    }
+  }
+
   return (
     <FullPageContainer>
       <Title>Projects</Title>
       <Grid>
         {
           projectsCollection.map((project, i) => (
-            <Box key={i} {...project}/>
+            <Box key={i} {...project} onClick={() => openLightBox(i)}>
+            </Box>
           ))
         }
       </Grid>
+      <Lightbox projects={projectsCollection} ref={lightboxRef}/>
     </FullPageContainer>
   )
 }

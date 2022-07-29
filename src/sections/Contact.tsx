@@ -1,8 +1,6 @@
 import Title from "../components/Title"
-import {ReactComponent as CodepenIcon} from "../assets/svg/icons/codepen.svg"
-import {ReactComponent as GithubIcon} from "../assets/svg/icons/github.svg"
-import {ReactComponent as LinkedinIcon} from "../assets/svg/icons/linkedin.svg"
-import {ReactComponent as UpworkIcon} from "../assets/svg/icons/upwork.svg"
+import ExternalLink from "../components/ExternalLink"
+import Icon from "../components/Icon"
 
 import "../assets/scss/sections/Contact.scss"
 
@@ -15,10 +13,26 @@ function Contact () {
           Feel free to write me at <a className="hover:underline" href="mailto:dassaev.tagle@gmail.com">dassaev.tagle@gmail.com</a>
         </h1>
         <ul className="contact-social">
-          <li><LinkedinIcon /></li>
-          <li><CodepenIcon /></li>
-          <li><GithubIcon /></li>
-          <li><UpworkIcon /></li>
+          <li>
+            <ExternalLink href="https://www.linkedin.com/in/rodolfo-dassaev-tagle-mesta-75471620a/">
+              <Icon name="Linkedin" />
+            </ExternalLink>
+          </li>
+          <li>
+            <ExternalLink href="https://codepen.io/dassaevtagle">
+              <Icon name="Codepen" />
+            </ExternalLink>
+          </li>
+          <li>
+            <ExternalLink href="https://github.com/dassaevtagle">
+              <Icon name="Github"/>
+            </ExternalLink>
+          </li>
+          <li>
+            <ExternalLink href="https://www.upwork.com/freelancers/~016d279c15b13329d6">
+              <Icon name='Upwork'/>
+            </ExternalLink>
+          </li>
         </ul>
       </div>
     </section>

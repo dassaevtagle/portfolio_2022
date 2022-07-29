@@ -2,7 +2,7 @@
   @apply bg-zinc-900 py-10 mt-36 rounded-t-3xl md:w-9/12 mx-auto;
   
   &-mail {
-    @apply text-3xl text-center mb-4 mt-20 font-light text-3xl;
+    @apply text-3xl text-center mb-4 mt-20 px-2 sm:px-0 font-light text-2xl sm:text-3xl;
   }
 
   &-social {
