@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode, MouseEvent } from "react";
 
 type ExternalLinkProps = {
   href: string;
@@ -6,7 +6,10 @@ type ExternalLinkProps = {
   children: ReactNode;
 }
 function ExternalLink ({href, classes, children}: ExternalLinkProps) {
-  return <a href={href} className={classes} target="_blank" rel="noopener noreferrer">{children}</a>
+  const stopPropagation = (e: MouseEvent<HTMLAnchorElement>) => {
+    e.stopPropagation()
+  } 
+  return <a href={href} className={classes} onClick={stopPropagation} target="_blank" rel="noopener noreferrer">{children}</a>
 }
 
 export default ExternalLink
