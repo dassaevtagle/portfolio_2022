@@ -30,7 +30,7 @@ $hover-transition: .2s ease;
       background: linear-gradient(145deg, #1b2535, #27334a);
   
       &:hover {
-        @apply lg:opacity-100;
+        opacity: 0.95;
       }
   
       &_text {

@@ -22,7 +22,7 @@ function App() {
     <>
       <Header {...headerProps}/>
       <div ref={heroRef}>
-        <Hero></Hero>
+        <Hero/>
       </div>
       <div ref={aboutRef}>
         <About/>
