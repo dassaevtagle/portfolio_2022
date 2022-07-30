@@ -21,11 +21,13 @@ const Lightbox = forwardRef<LightboxHandle, LightboxProps>(({projects}, ref) => 
   function open(projectId: number) {
     let selectedProject: Project = projects[projectId];
     if (container.current) {
+      let body = document.body;
       let containerDiv = container.current
       let img = containerDiv.firstChild as HTMLImageElement;
       let nameDiv = containerDiv.children[1] as HTMLDivElement;
       let descriptionDiv = containerDiv.children[2] as HTMLDivElement;
 
+      body.style.overflow = 'hidden';
       containerDiv.style.display = 'grid';
       img.src = selectedProject.image;
       img.alt = selectedProject.name;
@@ -36,6 +38,8 @@ const Lightbox = forwardRef<LightboxHandle, LightboxProps>(({projects}, ref) => 
     
   function close() {
     if(container.current) {
+      let body = document.body;
+      body.style.overflow = 'auto';
       container.current.style.display = 'none'
     }
   }
