@@ -1,15 +1,8 @@
 import { CodepenIcon, ExternalIcon, GithubIcon, LinkedinIcon, UpworkIcon } from "../assets/svg/icons";
 
-/**
- * Possible icons are:
- * -Codepen
- * -Github
- * -Linkedin
- * -Upwork
- * -External.
- * Default icon is 'External'.
- */
-function Icon ({name} : {name: string}): JSX.Element {
+type IconType = "Codepen" | "Github" | "Linkedin" | "Upwork" | "External";
+
+function Icon ({name} : {name: IconType}): JSX.Element {
   switch (name) {
     case 'Codepen':
       return <CodepenIcon/>

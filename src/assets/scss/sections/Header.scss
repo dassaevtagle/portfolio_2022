@@ -2,4 +2,12 @@
   background-color: rgba(18, 22, 28, .7);
   z-index: 2;
   @apply sticky top-0 flex justify-end p-2 gap-x-4 text-2xl;
+  
+  &_hero {
+    @apply cursor-pointer mr-auto ml-4 text-3xl;
+  }
+
+  &_link {
+    @apply cursor-pointer uppercase hover:text-highlight;
+  }
 }

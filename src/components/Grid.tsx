@@ -2,6 +2,7 @@ import { CSSProperties, MouseEventHandler, ReactNode } from "react";
 import ExternalLink from "./ExternalLink";
 import Icon from "./Icon";
 import '../assets/scss/components/Grid.scss';
+import { Project } from "../sections/Projects";
 
 /** 
  * 3-columns grid component.
@@ -11,17 +12,12 @@ function Grid ({children}: {children: ReactNode}) {
   return <div className="grid-component">{children}</div>
 }
 
-type BoxProps = {
-  name: string;
-  image?: string;
-  description: string;
-  sourceUrl?: string;
-  demoUrl?: string;
-  lgRow?: boolean;
-  lgColumn?: boolean;
+type BaseProps = {
   onClick?: MouseEventHandler;
   children?: ReactNode;
 }
+
+type BoxProps = BaseProps & Project
 
 /** 
  *lgRows and lgColumns will span 2 places and only after lg breakpoint. 

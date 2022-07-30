@@ -11,8 +11,6 @@ import FancyTails from '../assets/img/fancytails.png'
 import CostCalculator from '../assets/img/cost-calculator.png'
 import Portfolio2021 from '../assets/img/portfolio-2021.png'
 
-import '../assets/scss/sections/Projects.scss';
-
 export type Project = {
   image: string;
   name: string;
