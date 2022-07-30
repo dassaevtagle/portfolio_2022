@@ -47,6 +47,7 @@ $hover-transition: .2s ease;
         @apply text-white;
 
         &-description {
+          @apply hidden lg:block;
           margin-top: 5px;
           font-weight: 200;
           text-align: justify;
