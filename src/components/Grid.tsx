@@ -14,6 +14,7 @@ function Grid ({children}: {children: ReactNode}) {
 type BoxProps = {
   name: string;
   image?: string;
+  description: string;
   sourceUrl?: string;
   demoUrl?: string;
   lgRow?: boolean;
@@ -25,7 +26,7 @@ type BoxProps = {
 /** 
  *lgRows and lgColumns will span 2 places and only after lg breakpoint. 
 */
-function Box({name, image, sourceUrl, demoUrl, lgRow = false, lgColumn = false, onClick, children}: BoxProps) {
+function Box({name, image, description, sourceUrl, demoUrl, lgRow = false, lgColumn = false, onClick, children}: BoxProps) {
   const boxClass = generateBoxClass(lgColumn, lgRow);
   const styleBgImage: CSSProperties = image ? {
     backgroundImage: `url(${image})`,
@@ -35,7 +36,7 @@ function Box({name, image, sourceUrl, demoUrl, lgRow = false, lgColumn = false, 
     <div className={boxClass} style={styleBgImage} onClick={onClick}>
       <div className="overlay">
         <div className="relative float-right">
-          <div className="inline-flex gap-x-4 m-6 text-highlight">
+          <div className="inline-flex gap-x-3 m-3 text-highlight">
             {
               sourceUrl &&
               <ExternalLink href={sourceUrl}>
@@ -51,7 +52,12 @@ function Box({name, image, sourceUrl, demoUrl, lgRow = false, lgColumn = false, 
           </div>
         </div>
         <div className="overlay_text">
-          {name}
+          <div className="overlay_text-name">
+            {name}
+          </div>
+          <div className="overlay_text-description">
+            {description}
+          </div>
           {children}
         </div>
       </div>

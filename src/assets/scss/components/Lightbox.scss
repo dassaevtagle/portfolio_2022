@@ -8,18 +8,24 @@
   text-align: center;
   grid-auto-rows: max-content;
   align-content: center;
+  overflow: visible;
   padding: 1.5rem;
-  background-color: rgb(51 51 51 / 80%);
+  background-color: rgb(51 51 51 / 95%);
   z-index: 2;
 
   &_image {
     margin: auto;
-    height: 400px;
     object-fit: contain;
     opacity: 1;
+    @apply h-80;
+  }
+
+  &_name {
+    padding-top: 22px;
   }
 
   &_caption {
-    padding-top: 2em;
+    padding-top: 10px;
+    text-align: justify;
   }
 }

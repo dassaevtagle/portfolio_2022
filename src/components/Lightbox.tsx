@@ -23,12 +23,14 @@ const Lightbox = forwardRef<LightboxHandle, LightboxProps>(({projects}, ref) => 
     if (container.current) {
       let containerDiv = container.current
       let img = containerDiv.firstChild as HTMLImageElement;
-      let descriptionDiv = containerDiv.children[1] as HTMLDivElement;
+      let nameDiv = containerDiv.children[1] as HTMLDivElement;
+      let descriptionDiv = containerDiv.children[2] as HTMLDivElement;
 
       containerDiv.style.display = 'grid';
       img.src = selectedProject.image;
       img.alt = selectedProject.name;
-      descriptionDiv.innerText = selectedProject.name
+      nameDiv.innerText = selectedProject.name
+      descriptionDiv.innerText = selectedProject.description
     }
   }
     
@@ -41,6 +43,7 @@ const Lightbox = forwardRef<LightboxHandle, LightboxProps>(({projects}, ref) => 
   return (
     <div className="lightbox" ref={container} onClick={close}>
       <img className="lightbox_image" alt=""/>
+      <div className="lightbox_name"></div>
       <div className="lightbox_caption"></div>
     </div>
   )
