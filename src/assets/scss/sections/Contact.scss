@@ -1,6 +1,5 @@
 .contact {
-  box-shadow: 41px 0px 0px #121212;
-  @apply bg-zinc-900 py-10 mt-36 rounded-t-3xl md:w-9/12 mx-auto;
+  @apply bg-zinc-900 py-10 mt-36 rounded-t-3xl md:w-9/12 mx-auto shadow-none md:shadow-[41px_0px_0px_#121212];
   
   &-mail {
     @apply text-3xl text-center mb-4 mt-20 px-2 sm:px-0 font-light text-2xl sm:text-3xl;

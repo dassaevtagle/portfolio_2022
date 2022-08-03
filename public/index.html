@@ -18,16 +18,54 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+    <div id="root">
+      <!-- 
+        Loading spinner will show before React App loads, after that React
+        removes any children of #root div.
+      -->
+      <style>
+        body {
+          box-sizing: border-box;
+          margin: 0;
+        }
+        .loading-container {
+          height: 100vh;
+          background-color: rgba(18,22,28);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+        }
+        .spinner {
+          height: 14rem;
+          width: 14rem;
+          border: 20px solid white;
+          border-left: 20px solid rgba(24 236 89);
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          animation: spin infinite 1.5s linear;
+        }
+        .spinner-text {
+          position: absolute;
+          font-size: 14px;
+          color: white;
+          font-weight: 600;
+          letter-spacing: 1.5px;
+          text-transform: uppercase;
+          font-family: sans-serif;
+        }
+        @keyframes spin {
+          to { transform: rotate(360deg); }
+        }
+      </style>
+      <div class="loading-container">
+        <p class="spinner-text">
+            loading...
+        </p>
+        <div class="spinner"></div>
+      </div>
+    </div>
   </body>
 </html>
