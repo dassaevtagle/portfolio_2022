@@ -6,7 +6,6 @@ Hi! Welcome to my portfolio. Feel free to clone the repository.
 
  - [Typescript](https://www.typescriptlang.org/) 
  - [Tailwind](https://tailwindcss.com/)
- - [Locomotive](https://locomotivemtl.github.io/locomotive-scroll/)
  - [Motion](https://motion.dev/)
 
 ## Run locally
