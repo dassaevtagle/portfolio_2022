@@ -1,6 +1,6 @@
-import { CodepenIcon, ExternalIcon, GithubIcon, LinkedinIcon, UpworkIcon } from "../assets/svg/icons";
+import { BurgerIcon, CloseIcon, CodepenIcon, ExternalIcon, GithubIcon, LinkedinIcon, UpworkIcon } from "../assets/svg/icons";
 
-type IconType = "Codepen" | "Github" | "Linkedin" | "Upwork" | "External";
+type IconType = "Codepen" | "Github" | "Linkedin" | "Upwork" | "External" | "Burger" | "Close";
 
 function Icon ({name}: {name: IconType}): JSX.Element {
   switch (name) {
@@ -12,6 +12,10 @@ function Icon ({name}: {name: IconType}): JSX.Element {
       return <LinkedinIcon/>
     case 'Upwork':
       return <UpworkIcon/>
+    case 'Burger':
+      return <BurgerIcon/>
+    case 'Close':
+      return <CloseIcon/>
     case 'External':
     default:
       return <ExternalIcon/>
