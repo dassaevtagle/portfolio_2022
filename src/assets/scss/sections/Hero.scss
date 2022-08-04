@@ -1,5 +1,4 @@
 .hero {
-  background-size: cover;
   @apply h-screen grid grid-cols-1 lg:grid-cols-2 place-content-center lg:place-content-stretch px-6 lg:px-2;
   
   //lg breakpoint!
@@ -23,4 +22,9 @@
       @apply text-highlight;
     }
   }
+}
+
+.main-background {
+  position: absolute;
+  max-width: 100%;
 }

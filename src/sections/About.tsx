@@ -7,6 +7,14 @@ import '../assets/scss/sections/About.scss';
 import ExternalLink from "../components/ExternalLink";
 
 function About () {
+  const latestTeachnologiesUsed: string[] = [
+    'React',
+    'Node',
+    'Vue',
+    'TypeScript',
+    'TailwindCSS',
+    'SASS',
+  ] 
   return (
     <FullPageContainer>
       <Title>About me</Title>
@@ -29,12 +37,9 @@ function About () {
           These are some <span className="underline text-highlight">technologies</span> I've been working with recently:
           <div className="tech-container">
             <ul className="grid grid-cols-3 gap-2 ml-8 list-disc text-lg reiju p-4 gap-x-12">
-              <li>React</li>
-              <li>Vue</li>
-              <li>Node</li>
-              <li>Typescript</li>
-              <li>Tailwind</li>
-              <li>Sass</li>
+              {
+                latestTeachnologiesUsed.map((tech, idx) => <li key={idx}>{tech}</li>)
+              }
             </ul>
           </div> 
         </div>

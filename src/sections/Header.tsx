@@ -18,7 +18,6 @@ function Header({heroRef, aboutRef, projectsRef, contactRef}: HeaderProps) {
 
 
   const showMenu = () => {
-    console.log("showing")
     if (mobileMenuRef.current) {
       mobileMenuRef.current.style.display = 'grid'
     }

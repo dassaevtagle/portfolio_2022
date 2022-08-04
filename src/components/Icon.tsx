@@ -1,6 +1,6 @@
 import { BurgerIcon, CloseIcon, CodepenIcon, ExternalIcon, GithubIcon, LinkedinIcon, UpworkIcon } from "../assets/svg/icons";
 
-type IconType = "Codepen" | "Github" | "Linkedin" | "Upwork" | "External" | "Burger" | "Close";
+export type IconType = "Codepen" | "Github" | "Linkedin" | "Upwork" | "External" | "Burger" | "Close";
 
 function Icon ({name}: {name: IconType}): JSX.Element {
   switch (name) {
