@@ -3,6 +3,8 @@ import ExternalLink from "../components/ExternalLink"
 import Icon, { IconType } from "../components/Icon"
 
 import "../assets/scss/sections/Contact.scss"
+import { useEffect, useRef } from "react"
+import useOnScreen from "../hooks/useOnScreen"
 
 type ContactItem = {
   icon: IconType;
@@ -10,6 +12,19 @@ type ContactItem = {
 }
 
 function Contact () {
+  const contactRef = useRef<HTMLDivElement>(null)
+  const isOnScreen = useOnScreen(contactRef, { rootMargin: '150px' })
+
+  useEffect(() => {
+    handleIntersection()
+  }, [contactRef, isOnScreen])
+
+  function handleIntersection() {
+    if (contactRef.current){
+      isOnScreen && contactRef.current.classList.add('contact-visible')
+      !isOnScreen && contactRef.current.classList.remove('contact-visible')
+    }
+  }
 
   //To add more icons, add SVG and register them on assets/svg/icons/index.tsx and on components/Icon.tsx
   const contactList: ContactItem[] = [
@@ -32,8 +47,8 @@ function Contact () {
   ]
 
   return (
-    <section>
-      <div className="contact">
+    <section className="overflow-hidden">
+      <div ref={contactRef} className="contact">
         <Title>Contact</Title>
         <h1 className="contact-mail">
           Feel free to write me at&nbsp;

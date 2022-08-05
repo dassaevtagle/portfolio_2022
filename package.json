@@ -11,7 +11,6 @@
     "@types/react": "^18.0.12",
     "@types/react-dom": "^18.0.5",
     "@types/rellax": "^1.7.4",
-    "motion": "^10.13.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-scripts": "5.0.1",
