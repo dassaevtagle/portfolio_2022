@@ -12,7 +12,7 @@ function useOnScreen( ref: RefObject<HTMLElement>, observerOptions?: Intersectio
     return () => {
       observer && observer.disconnect()
     }
-  }, [ref])
+  }, [ref, observerOptions])
 
   return isOnScreen
 }

@@ -14,17 +14,13 @@ type ContactItem = {
 function Contact () {
   const contactRef = useRef<HTMLDivElement>(null)
   const isOnScreen = useOnScreen(contactRef, { rootMargin: '150px' })
-
+  
   useEffect(() => {
-    handleIntersection()
-  }, [contactRef, isOnScreen])
-
-  function handleIntersection() {
     if (contactRef.current){
       isOnScreen && contactRef.current.classList.add('contact-visible')
       !isOnScreen && contactRef.current.classList.remove('contact-visible')
     }
-  }
+  }, [contactRef, isOnScreen])
 
   //To add more icons, add SVG and register them on assets/svg/icons/index.tsx and on components/Icon.tsx
   const contactList: ContactItem[] = [
