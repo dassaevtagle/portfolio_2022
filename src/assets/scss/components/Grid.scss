@@ -8,6 +8,10 @@ $hover-transition: .2s ease;
     filter: grayscale(0.3);
     transition: $hover-transition;
     min-height: 11rem;
+
+    @media (max-width: 768px) {
+      min-height: 18rem;
+    }
     
     &:hover {
       transform: scale(1.05);
