@@ -21,7 +21,7 @@ function About () {
       <div className="about-grid">
         <div className="about-grid_description">
           <p>
-            Hey! I'm Rodolfo Dassaev Tagle, a Software Engineer who loves <span className="text-highlight">Front End</span>.
+            Hey! I'm Rodolfo Dassaev Tagle, a Software Engineer who loves <span className="text-highlight">Front End</span> development.
             <br/>
             I started to learn programming back in 2019 when I found about&nbsp;
             <ExternalLink href="https://theodinproject.com" type="hover">The Odin Project</ExternalLink>,

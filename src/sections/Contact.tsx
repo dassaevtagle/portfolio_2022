@@ -5,6 +5,7 @@ import Icon, { IconType } from "../components/Icon"
 import "../assets/scss/sections/Contact.scss"
 import { useEffect, useRef } from "react"
 import useOnScreen from "../hooks/useOnScreen"
+import useWidth from "../hooks/useWidth"
 
 type ContactItem = {
   icon: IconType;
@@ -13,14 +14,19 @@ type ContactItem = {
 
 function Contact () {
   const contactRef = useRef<HTMLDivElement>(null)
-  const isOnScreen = useOnScreen(contactRef, { rootMargin: '150px' })
-  
+  const isOnScreen = useOnScreen(contactRef, { rootMargin: '130px' })
+  const {isMobile} = useWidth()
+
   useEffect(() => {
     if (contactRef.current){
-      isOnScreen && contactRef.current.classList.add('contact-visible')
-      !isOnScreen && contactRef.current.classList.remove('contact-visible')
+      if(!isMobile){
+        isOnScreen && contactRef.current.classList.add('contact-visible')
+        !isOnScreen && contactRef.current.classList.remove('contact-visible')
+      } else {
+        contactRef.current.classList.add('contact-visible')
+      }
     }
-  }, [contactRef, isOnScreen])
+  }, [contactRef, isOnScreen, isMobile])
 
   //To add more icons, add SVG and register them on assets/svg/icons/index.tsx and on components/Icon.tsx
   const contactList: ContactItem[] = [

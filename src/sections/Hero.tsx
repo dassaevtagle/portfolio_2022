@@ -1,10 +1,40 @@
+import { useEffect, useRef } from "react";
 import FullPageContainer from "../components/FullPageContainer"
+import useOnScreen from "../hooks/useOnScreen";
+import anime from "animejs";
 import '../assets/scss/sections/Hero.scss';
 
 function Hero () {
+  const heroRef = useRef<HTMLDivElement>(null)
+  const isOnScreen = useOnScreen(heroRef)
+  const animate = () => {
+    const tl = anime.timeline()
+    tl
+    .add({
+      targets: '.hero-greeting',
+      opacity: [0, 1],
+      translateX: ['-100%', '0%'],
+      easing: 'easeInOutCirc',
+      duration: 750,
+    })
+
+    tl
+    .add({
+      targets: '.hero-intro',
+      opacity: [0, 1],
+      translateX: ['100%', '0%'],
+      easing: 'easeInOutCirc',
+      duration: 750,
+    }, '-=500')
+  }
+  useEffect(() => {
+    if(heroRef.current && isOnScreen){
+      animate()
+    }
+  }, [heroRef, isOnScreen])
   return (
     <FullPageContainer>
-      <div className="hero">
+      <div className="hero" ref={heroRef}>
         <h2 className="hero-greeting reiju">
           Hello! I'm
           <br/>

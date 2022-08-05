@@ -47,23 +47,11 @@
           align-items: center;
           animation: spin infinite 1.5s linear;
         }
-        .spinner-text {
-          position: absolute;
-          font-size: 14px;
-          color: white;
-          font-weight: 600;
-          letter-spacing: 1.5px;
-          text-transform: uppercase;
-          font-family: sans-serif;
-        }
         @keyframes spin {
           to { transform: rotate(360deg); }
         }
       </style>
       <div class="loading-container">
-        <p class="spinner-text">
-            loading...
-        </p>
         <div class="spinner"></div>
       </div>
     </div>

@@ -46,9 +46,9 @@ function Header({heroRef, aboutRef, projectsRef, contactRef}: HeaderProps) {
           </div>
           :
           <>
-            <div className="h-wrapper_link" onClick={() => handleOnClick(aboutRef)}>About</div>
-            <div className="h-wrapper_link" onClick={() => handleOnClick(projectsRef)}>Projects</div>
-            <div className="h-wrapper_link" onClick={() => handleOnClick(contactRef)}>Contact</div>
+            <div className="h-wrapper_link|" onClick={() => handleOnClick(aboutRef)}>About</div>
+            <div className="h-wrapper_link|" onClick={() => handleOnClick(projectsRef)}>Projects</div>
+            <div className="h-wrapper_link|" onClick={() => handleOnClick(contactRef)}>Contact</div>
           </>
         }
       </header>

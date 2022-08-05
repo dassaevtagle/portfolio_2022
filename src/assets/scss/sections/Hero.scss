@@ -1,5 +1,5 @@
 .hero {
-  @apply h-screen grid grid-cols-1 lg:grid-cols-2 place-content-center lg:place-content-stretch px-6 lg:px-2;
+  @apply h-screen grid grid-cols-1 lg:grid-cols-2 place-content-center lg:place-content-stretch px-6 lg:px-2 overflow-hidden;
   
   //lg breakpoint!
   @media (min-width: 1024px) {
@@ -7,15 +7,23 @@
   }
 
   &-greeting {
+    transform: translateX(-100%);
     @apply my-auto text-slate-300 text-5xl sm:text-7xl;
 
     &_name {
       text-shadow: -9px 8px 0 #000000;
+      transition: linear 0.2s;
       @apply relative flex text-white text-8xl sm:text-9xl;
+
+      &:hover {
+        transform: translateX(7px) translateY(-7px);
+        text-shadow: -16px 15px 0 #00000009;
+      }
     }
   }
 
   &-intro {
+    transform: translateX(100%);
     @apply lg:mb-20 mt-10 lg:mt-auto  text-slate-200 font-medium;
 
     span {
