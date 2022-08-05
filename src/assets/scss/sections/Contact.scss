@@ -1,6 +1,6 @@
 .contact {
   transform: translateY(100%);
-  transition: ease-out 0.9s;
+  transition: 0.9s;
   @apply bg-zinc-900 py-14 mt-36 rounded-t-3xl md:w-9/12 mx-auto shadow-none;
   @media (min-width: 768px) { 
     box-shadow: 41px 0px 0px #121212;

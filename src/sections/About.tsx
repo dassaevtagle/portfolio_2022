@@ -1,12 +1,15 @@
 import FullPageContainer from "../components/FullPageContainer"
 import Title from "../components/Title"
+import Tilt from 'react-parallax-tilt'
 import ProfileBlack from "../assets/img/memoji_rodolfo.png"
 import {ReactComponent as ExternalIcon} from "../assets/svg/icons/external.svg"
 
 import '../assets/scss/sections/About.scss';
 import ExternalLink from "../components/ExternalLink";
+import { useState } from "react"
 
 function About () {
+  const [flip, setFlip] = useState<boolean>(false)
   const latestTeachnologiesUsed: string[] = [
     'React',
     'Node',
@@ -14,7 +17,7 @@ function About () {
     'TypeScript',
     'TailwindCSS',
     'SASS',
-  ] 
+  ]
   return (
     <FullPageContainer>
       <Title>About me</Title>
@@ -31,7 +34,10 @@ function About () {
           </p>
         </div>
         <div className="about-grid_memoji">
-          <img src={ProfileBlack} alt="Me" className="rounded image" />
+          <Tilt tiltReverse scale={1.2} flipVertically={flip}>
+            <p className="absolute text-sm top-2 right-20 text-gray-400">Click me 💡</p>
+            <img onClick={() => setFlip(!flip)} src={ProfileBlack} alt="Me" className="rounded image" />
+          </Tilt>
         </div>
         <div className="about-grid_tech">
           These are some <span className="underline text-highlight">technologies</span> I've been working with recently:
