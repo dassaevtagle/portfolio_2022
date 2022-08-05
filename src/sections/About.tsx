@@ -35,7 +35,7 @@ function About () {
         </div>
         <div className="about-grid_memoji">
           <Tilt tiltReverse scale={1.2} flipVertically={flip}>
-            <p className="absolute text-sm top-4 right-20 text-gray-400">Click me</p>
+            <p className="absolute text-sm top-2 right-20 text-gray-400">Click me</p>
             <img onClick={() => setFlip(!flip)} src={ProfileBlack} alt="Me" className="rounded image" />
           </Tilt>
         </div>
