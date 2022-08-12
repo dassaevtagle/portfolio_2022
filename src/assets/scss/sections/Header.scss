@@ -8,7 +8,7 @@
   }
 
   &_link {
-    @apply cursor-pointer uppercase hover:text-highlight;
+    @apply cursor-pointer uppercase hover:text-highlight hover:scale-110 ease-in;
   }
 }
 
