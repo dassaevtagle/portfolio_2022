@@ -7,7 +7,7 @@ import '../assets/scss/sections/Hero.scss';
 
 function Hero () {
   const heroRef = useRef<HTMLDivElement>(null)
-  const isOnScreen = useOnScreen(heroRef)
+  const isOnScreen = useOnScreen({ref: heroRef, triggerOnce: true})
   const animate = () => {
     const tl = anime.timeline()
     tl

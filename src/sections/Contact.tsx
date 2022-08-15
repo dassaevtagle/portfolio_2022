@@ -14,7 +14,11 @@ type ContactItem = {
 
 function Contact () {
   const contactRef = useRef<HTMLDivElement>(null)
-  const isOnScreen = useOnScreen(contactRef, { rootMargin: '130px' })
+  const isOnScreen = useOnScreen({
+    ref: contactRef,
+    observerOptions: { rootMargin: '130px' },
+    triggerOnce: true
+  })
   const {isMobile} = useWidth()
 
   useEffect(() => {

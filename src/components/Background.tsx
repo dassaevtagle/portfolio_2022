@@ -13,7 +13,7 @@ function Background () {
   }
 
   const backgroundRef = useRef<HTMLElement>(null)
-  const isOnScreen = useOnScreen(backgroundRef)
+  const isOnScreen = useOnScreen({ref: backgroundRef})
 
   useEffect(() => {
     const rellax = new Rellax('.rellax')
