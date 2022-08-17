@@ -1,4 +1,4 @@
-import { useRef } from "react"
+import { useRef, useEffect } from "react"
 import FullPageContainer from "../components/FullPageContainer"
 import { Box, Grid } from "../components/Grid"
 import Title from "../components/Title"
@@ -10,6 +10,8 @@ import RocketCode from '../assets/img/rocket-code.png'
 import FancyTails from '../assets/img/fancytails.png'
 import CostCalculator from '../assets/img/cost-calculator.png'
 import Portfolio2021 from '../assets/img/portfolio-2021.png'
+import useOnScreen from "../hooks/useOnScreen"
+import anime from "animejs"
 
 export type Project = {
   image: string;
@@ -76,6 +78,31 @@ function Projects() {
 
 
   const lightboxRef = useRef<LightboxHandle>(null);
+  const projectsRef = useRef<HTMLDivElement>(null);
+  const isOnScreen = useOnScreen({
+    ref: projectsRef,
+    observerOptions:{
+      rootMargin: '-200px'
+    },
+    triggerOnce: true
+  })
+  const animate = () => {
+    const tl = anime.timeline()
+    tl
+    .add({
+      targets: '.grid-container',
+      opacity: [0, 1],
+      easing: 'easeInOutCirc',
+      duration: 700,
+    })
+
+  }
+  useEffect(() => {
+    if(projectsRef.current && isOnScreen) {
+      animate()
+    }
+  }, [projectsRef, isOnScreen])
+  
 
   const openLightBox = (i: number) => {
     if (lightboxRef.current) {
@@ -86,13 +113,17 @@ function Projects() {
   return (
     <FullPageContainer>
       <Title>Projects</Title>
-      <Grid>
-        {
-          projectsCollection.map((project, i) => (
-            <Box key={i} {...project} onClick={() => openLightBox(i)}/>
-          ))
-        }
-      </Grid>
+      <div ref={projectsRef}>
+        <div className="grid-container" style={{opacity: '0'}}>
+          <Grid>
+            {
+              projectsCollection.map((project, i) => (
+                <Box key={i} {...project} onClick={() => openLightBox(i)}/>
+              ))
+            }
+          </Grid>
+        </div>
+      </div>
       <Lightbox projects={projectsCollection} ref={lightboxRef}/>
     </FullPageContainer>
   )

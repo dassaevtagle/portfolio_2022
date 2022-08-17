@@ -1,13 +1,16 @@
 import { useEffect, useRef } from "react";
 import Tilt from 'react-parallax-tilt'
+import anime from "animejs";
 import FullPageContainer from "../components/FullPageContainer"
 import useOnScreen from "../hooks/useOnScreen";
-import anime from "animejs";
 import '../assets/scss/sections/Hero.scss';
 
 function Hero () {
   const heroRef = useRef<HTMLDivElement>(null)
-  const isOnScreen = useOnScreen({ref: heroRef, triggerOnce: true})
+  const isOnScreen = useOnScreen({
+    ref: heroRef,
+    triggerOnce: true
+  })
   const animate = () => {
     const tl = anime.timeline()
     tl
@@ -28,11 +31,13 @@ function Hero () {
       duration: 750,
     }, '-=500')
   }
+
   useEffect(() => {
     if(heroRef.current && isOnScreen){
       animate()
     }
   }, [heroRef, isOnScreen])
+
   return (
     <FullPageContainer>
       <div className="hero" ref={heroRef}>

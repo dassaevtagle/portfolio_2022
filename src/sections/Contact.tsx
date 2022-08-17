@@ -32,7 +32,7 @@ function Contact () {
     }
   }, [contactRef, isOnScreen, isMobile])
 
-  //To add more icons, add SVG and register them on assets/svg/icons/index.tsx and on components/Icon.tsx
+  //To add more icons, add SVG and register them in assets/svg/icons/index.tsx and components/Icon.tsx
   const contactList: ContactItem[] = [
     {
       icon: 'Linkedin',
@@ -58,7 +58,9 @@ function Contact () {
         <Title>Contact</Title>
         <h1 className="contact-mail">
           Feel free to write me at&nbsp;
-          <ExternalLink type="hover" href="mailto:dassaev.tagle@gmail.com">dassaev.tagle@gmail.com</ExternalLink>
+          <ExternalLink type="hover" href="mailto:dassaev.tagle@gmail.com">
+            dassaev.tagle@gmail.com
+          </ExternalLink>
         </h1>
         <ul className="contact-social">
           {

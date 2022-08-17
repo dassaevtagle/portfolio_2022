@@ -1,5 +1,6 @@
 .about-grid {
-  @apply grid px-2 md:px-6 lg:px-14 grid-cols-1 lg:grid-cols-12 lg:grid-rows-2 items-center mt-16;
+  @apply grid px-2 md:px-6 lg:px-14 grid-cols-1 lg:grid-cols-12 lg:grid-rows-2 items-center mt-16 opacity-0;
+  transform: translateY(30%);
   grid-template-rows: auto;
 
   &_description {
@@ -11,6 +12,10 @@
 
   &_memoji {
     @apply justify-center m-auto lg:col-span-3;
+
+    &-img {
+      animation: float 4s ease-in-out infinite;
+    }
   }
   
   &_resume {
@@ -31,4 +36,16 @@
       }
     }
   }
+}
+
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-20px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
 }
