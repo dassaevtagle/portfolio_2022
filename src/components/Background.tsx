@@ -26,7 +26,7 @@ function Background () {
   }, [isOnScreen, backgroundRef])
 
   return(
-    <BackgroundSVG style={styles} ref={backgroundRef}/>
+    <BackgroundSVG className='2xl:container' style={styles} ref={backgroundRef}/>
   )
 }
 
