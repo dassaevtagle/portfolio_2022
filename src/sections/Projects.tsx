@@ -12,6 +12,7 @@ import CostCalculator from '../assets/img/cost-calculator.png'
 import Portfolio2021 from '../assets/img/portfolio-2021.png'
 import useOnScreen from "../hooks/useOnScreen"
 import anime from "animejs"
+import useWidth from "../hooks/useWidth"
 
 export type Project = {
   image: string;
@@ -79,10 +80,12 @@ function Projects() {
 
   const lightboxRef = useRef<LightboxHandle>(null);
   const projectsRef = useRef<HTMLDivElement>(null);
+  const { isMobile } = useWidth()
+  const ROOT_MARGIN = isMobile ? '0px' : '-200px'
   const isOnScreen = useOnScreen({
     ref: projectsRef,
     observerOptions:{
-      rootMargin: '-200px'
+      rootMargin: ROOT_MARGIN,
     },
     triggerOnce: true
   })

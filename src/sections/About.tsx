@@ -9,6 +9,7 @@ import ExternalLink from "../components/ExternalLink";
 import {ReactComponent as ExternalIcon} from "../assets/svg/icons/external.svg"
 import ProfileBlack from "../assets/img/memoji_rodolfo.png"
 import '../assets/scss/sections/About.scss';
+import useWidth from "../hooks/useWidth";
 
 function About () {
   const latestTeachnologiesUsed: string[] = [
@@ -22,10 +23,12 @@ function About () {
   const resumeUrl = 'https://drive.google.com/file/d/1LxeepIkH6VVdJ8SxOMem-RHj03PUii4p/view?usp=sharing'
   const [flip, setFlip] = useState<boolean>(false)
   const aboutRef = useRef<HTMLDivElement>(null)
+  const { isMobile } = useWidth()
+  const ROOT_MARGIN = isMobile ? '0px' : '-200px'
   const isOnScreen = useOnScreen({
     ref: aboutRef,
     observerOptions: {
-      rootMargin: '-200px'
+      rootMargin: ROOT_MARGIN,
     },
     triggerOnce: true
   })
