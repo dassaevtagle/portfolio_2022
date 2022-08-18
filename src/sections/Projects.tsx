@@ -81,11 +81,11 @@ function Projects() {
   const lightboxRef = useRef<LightboxHandle>(null);
   const projectsRef = useRef<HTMLDivElement>(null);
   const { isMobile } = useWidth()
-  const ROOT_MARGIN = isMobile ? '0px' : '-200px'
+  const ROOT_MARGIN = isMobile ? '0px' : '-300px'
   const isOnScreen = useOnScreen({
     ref: projectsRef,
     observerOptions:{
-      rootMargin: ROOT_MARGIN,
+      rootMargin: ROOT_MARGIN
     },
     triggerOnce: true
   })
