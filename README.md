@@ -6,7 +6,7 @@ Hi! Welcome to my portfolio. Feel free to clone the repository.
 
  - [Typescript](https://www.typescriptlang.org/) 
  - [Tailwind](https://tailwindcss.com/)
- - [Motion](https://motion.dev/)
+ - [Anime](https://animejs.com/)
 
 ## Run locally
 This project is written mainly in [Typescript](https://www.typescriptlang.org/) along with [Tailwind](https://tailwindcss.com/).
