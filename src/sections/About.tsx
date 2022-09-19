@@ -20,7 +20,7 @@ function About () {
     'TailwindCSS',
     'SASS',
   ]
-  const resumeUrl = 'https://drive.google.com/file/d/1LxeepIkH6VVdJ8SxOMem-RHj03PUii4p/view?usp=sharing'
+  const resumeUrl = 'https://drive.google.com/file/d/1fwXagkzVHhH2N3Mv6rgwcuLzrCih494D/view?usp=sharing'
   const [flip, setFlip] = useState<boolean>(false)
   const aboutRef = useRef<HTMLDivElement>(null)
   const { isMobile } = useWidth()

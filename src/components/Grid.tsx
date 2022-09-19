@@ -1,28 +1,43 @@
-import { CSSProperties, MouseEventHandler, ReactNode } from "react";
+import { CSSProperties, FunctionComponent, MouseEventHandler, ReactElement, ReactNode } from "react";
 import ExternalLink from "./ExternalLink";
 import Icon from "./Icon";
 import '../assets/scss/components/Grid.scss';
 import { Project } from "../sections/Projects";
 
+
+interface IGrid {
+  children: ReactElement<BoxProps> | Array<ReactElement<BoxProps>>;
+}
+
 /** 
  * 3-columns grid component.
  * 1-column on mobile.
 */
-function Grid ({children}: {children: ReactNode}) {
+const Grid: FunctionComponent<IGrid> = ({children}: IGrid) => {
   return <div className="grid-component">{children}</div>
 }
 
-type BaseProps = {
+type BoxBaseProps = {
   onClick?: MouseEventHandler;
   children?: ReactNode;
 }
 
-type BoxProps = BaseProps & Project
+type BoxProps = BoxBaseProps & Project
 
 /** 
  *lgRows and lgColumns will span 2 places and only after lg breakpoint. 
 */
-function Box({name, image, description, sourceUrl, demoUrl, lgRow = false, lgColumn = false, onClick, children}: BoxProps) {
+function Box({
+    name,
+    image,
+    description,
+    sourceUrl,
+    demoUrl,
+    lgRow = false,
+    lgColumn = false,
+    onClick,
+    children
+  }: BoxProps) {
   const boxClass = generateBoxClass(lgColumn, lgRow);
   const styleBgImage: CSSProperties = image ? {
     backgroundImage: `url(${image})`,
