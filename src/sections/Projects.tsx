@@ -30,9 +30,8 @@ function Projects() {
       image: CostCalculator,
       name: 'Cost calculator',
       description: `This was my first React application and my first one deployed to AWS (EC2). 
-      It is a cost calculator made for a local bakery. Made with MERN stack. PASSWORD: chocolate`,
+      It is a cost calculator made for a local bakery. Made with MERN stack.`,
       sourceUrl: 'https://github.com/dassaevtagle/cost-calculator',
-      demoUrl: 'https://calculador-costos.herokuapp.com/',
       lgColumn: true,
     },
     {
@@ -41,7 +40,6 @@ function Projects() {
       description: `This was made in 3 days to pass the Torre (torre.co) 
       test for the Software Developer Intern position. Written with the MERN stack.`,
       sourceUrl: 'https://github.com/dassaevtagle/employee-info',
-      demoUrl: 'https://torreco-test.herokuapp.com/',
       lgRow: true,
     },
     {
@@ -73,7 +71,6 @@ function Projects() {
       image: Portfolio2021,
       description: `This was my first portfolio I created. A single HTML, CSS and JS static project.
       A small Express server was used for the mail delivery in the contact form.`,
-      demoUrl: 'http://dassaev-tagle-portfolio.herokuapp.com/',
     },
   ]
 

@@ -18,9 +18,12 @@ function About () {
     'Vue',
     'TypeScript',
     'TailwindCSS',
-    'SASS',
+    'PostgreSQL',
+    'GraphQL',
+    'Java',
+    'MySQL'
   ]
-  const resumeUrl = 'https://drive.google.com/file/d/1fwXagkzVHhH2N3Mv6rgwcuLzrCih494D/view?usp=sharing'
+  const resumeUrl = './cv.pdf'
   const [flip, setFlip] = useState<boolean>(false)
   const aboutRef = useRef<HTMLDivElement>(null)
   const { isMobile } = useWidth()
@@ -56,15 +59,14 @@ function About () {
         <div className="about-grid">
           <div className="about-grid_description">
             <p>
-              Hey! I'm Rodolfo Dassaev Tagle, a Software Engineer who loves
-              <span className="text-highlight"> Front End</span> development.
+              Hey! I'm Rodolfo Dassaev Tagle, a Software Engineer who loves music.
               <br/>
               I started to learn programming back in 2019 when I found about&nbsp;
               <ExternalLink href="https://theodinproject.com" type="hover">The Odin Project</ExternalLink>,
               since then I've worked as a Full Stack Developer using technologies such as .NET, Scala and Node.js.
               <br/>
               Currently I focus on mastering my skills in
-              <span className="text-highlight"> JavaScript</span> and <span className="text-highlight">TypeScript</span>.
+              <span className="text-highlight"> JavaScript </span> /- <span className="text-highlight"> TypeScript</span> and <span className="text-highlight">Java</span>.
             </p>
           </div>
           <div className="about-grid_memoji">
