@@ -1,6 +1,4 @@
-import { CSSProperties, FunctionComponent, MouseEventHandler, ReactElement, ReactNode } from "react";
-import ExternalLink from "./ExternalLink";
-import Icon from "./Icon";
+import { FunctionComponent, MouseEventHandler, ReactElement, ReactNode } from "react";
 import '../assets/scss/components/ProjectsList.scss';
 import { Project } from "../sections/Projects";
 
