@@ -30,7 +30,7 @@ export function Box({
   }: BoxProps) {
 
   const flexDirection = index % 2 === 0 ? 'row' : 'row-reverse';
-  const float = index % 2 === 0 ? 'float-end' : 'float-start';
+  const float = index % 2 === 0 ? 'float-start' : 'float-end';
 
   return (
     <div className={`w-full lg:flex flex-${flexDirection}`}>

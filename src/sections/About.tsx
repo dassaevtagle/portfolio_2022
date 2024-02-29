@@ -57,6 +57,7 @@ function About () {
       <Title>About me</Title>
       <div ref={aboutRef}>
         <div className="about-grid">
+          {/* <------- DESCRIPTION COLUMN::BEGIN ---------> */}
           <div className="about-grid_description">
             <p>
               Hey! I'm Rodolfo Dassaev Tagle, a Software Engineer who loves music.
@@ -69,22 +70,29 @@ function About () {
               <span className="text-highlight"> JavaScript </span> / <span className="text-highlight"> TypeScript</span> and <span className="text-highlight">Java</span>.
             </p>
           </div>
+          {/* <------- DESCRIPTION COLUMN::END ---------> */}
+          {/* <------- EMOJI COLUMN::BEGIN ---------> */}
+
           <div className="about-grid_memoji">
             <Tilt tiltReverse scale={1.2} flipVertically={flip}>
               <p className="absolute text-sm top-2 right-20 text-gray-400">Click me</p>
               <img onClick={() => setFlip(!flip)} src={ProfileBlack} alt="Me" className="rounded about-grid_memoji-img" />
             </Tilt>
           </div>
+          {/* <------- EMOJI COLUMN::END ---------> */}
+          {/* <------- TECH STACK COLUMN::BEGIN ---------> */}
           <div className="about-grid_tech">
-            These are some <span className="underline text-highlight">technologies</span> I've been working with recently:
+            These are some <span className="underline text-highlight">technologies</span> I've learned and used in projects:
             <div className="tech-container">
-              <ul className="grid grid-cols-3 gap-2 ml-8 list-disc text-lg reiju p-4 gap-x-12">
+              <ul className="grid grid-cols-3 gap-2 ml-8 list-disc text-2xl p-4 gap-x-24">
                 {
                   latestTeachnologiesUsed.map((tech, idx) => <li key={idx}>{tech}</li>)
                 }
               </ul>
             </div> 
           </div>
+          {/* <------- TECH STACK COLUMN::END ---------> */}
+          {/* <------- RESUME COLUMN::BEGIN ---------> */}
           <div className="about-grid_resume">
             <ExternalLink
               classes="rounded-lg py-3 px-6 border-solid border-2 hover:border-gray-300 hover:text-gray-300"
@@ -95,6 +103,7 @@ function About () {
               </span>
             </ExternalLink>
           </div>
+          {/* <------- RESUME COLUMN::END ---------> */}
         </div>
       </div>
     </FullPageContainer>
