@@ -18,7 +18,7 @@ function Background () {
   useEffect(() => {
     const rellax = new Rellax('.rellax')
     if(backgroundRef.current && isOnScreen) {
-      backgroundRef.current.style.opacity = '1'
+      backgroundRef.current.style.opacity = '0.90'
     }
     return () => {
       rellax.destroy()

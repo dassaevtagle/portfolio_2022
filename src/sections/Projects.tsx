@@ -26,8 +26,9 @@ function Projects() {
         url: RicardoAcostaWeb,
         alt: "Web screenshot"
       },
-      name: "Ricardo Acosta artist's website",
-      description: ``,
+      name: "Artist website (Ricardo Acosta)",
+      description: `I collaborated with a designer to transform our Ricardo's artistic vision into an elegant website. 
+      We used Figma for design and then built the site as a React SPA. The site is hosted on a Digital Ocean NodeJS App and the content is managed by the client through a CMS (Strapi).`,
       demoUrl: 'https://ricardoacostamusic.com',
     }
   ]
@@ -63,16 +64,18 @@ function Projects() {
 
   return (
     <FullPageContainer>
-      <Title>Projects</Title>
-      <div ref={projectsRef}>
-        <div className="list-container mt-[6rem]" style={{opacity: '0'}}>
-          <ProjectsList>
-            {
-              projectsCollection.map((project, i) => (
-                <Box key={i} {...project} index={i}/>
-              ))
-            }
-          </ProjectsList>
+      <div className="-mb-32">
+        <Title>Projects</Title>
+        <div ref={projectsRef}>
+          <div className="list-container mt-[7rem]" style={{opacity: '0'}}>
+            <ProjectsList>
+              {
+                projectsCollection.map((project, i) => (
+                  <Box key={i} {...project} index={i}/>
+                  ))
+                }
+            </ProjectsList>
+          </div>
         </div>
       </div>
     </FullPageContainer>

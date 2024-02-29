@@ -66,7 +66,7 @@ function About () {
               since then I've worked as a Full Stack Developer using technologies such as .NET, Scala and Node.js.
               <br/>
               Currently I focus on mastering my skills in
-              <span className="text-highlight"> JavaScript </span> /- <span className="text-highlight"> TypeScript</span> and <span className="text-highlight">Java</span>.
+              <span className="text-highlight"> JavaScript </span> / <span className="text-highlight"> TypeScript</span> and <span className="text-highlight">Java</span>.
             </p>
           </div>
           <div className="about-grid_memoji">
@@ -87,7 +87,7 @@ function About () {
           </div>
           <div className="about-grid_resume">
             <ExternalLink
-              classes="rounded py-3 px-6 border-solid border-2 hover:border-highlight hover:text-highlight"
+              classes="rounded-lg py-3 px-6 border-solid border-2 hover:border-gray-300 hover:text-gray-300"
               href={resumeUrl}>
               Resumé
               <span className="inline-flex ml-2 my-auto align-text-bottom">
