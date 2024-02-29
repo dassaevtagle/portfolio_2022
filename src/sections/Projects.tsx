@@ -1,5 +1,4 @@
 import { useRef, useEffect } from "react"
-import FullPageContainer from "../components/FullPageContainer"
 import { Box, ProjectsList } from "../components/ProjectsList"
 import Title from "../components/Title"
 
