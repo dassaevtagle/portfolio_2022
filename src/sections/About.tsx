@@ -23,7 +23,7 @@ function About () {
     'Java',
     'MySQL'
   ]
-  const resumeUrl = './cv.pdf'
+  const resumeUrl = './Resume.pdf'
   const [flip, setFlip] = useState<boolean>(false)
   const aboutRef = useRef<HTMLDivElement>(null)
   const { isMobile } = useWidth()
