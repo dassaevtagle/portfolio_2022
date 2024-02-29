@@ -27,7 +27,7 @@ function About () {
   const [flip, setFlip] = useState<boolean>(false)
   const aboutRef = useRef<HTMLDivElement>(null)
   const { isMobile } = useWidth()
-  const ROOT_MARGIN = isMobile ? '0px' : '-300px'
+  const ROOT_MARGIN = isMobile ? '0px' : '-500px'
   const isOnScreen = useOnScreen({
     ref: aboutRef,
     observerOptions: {

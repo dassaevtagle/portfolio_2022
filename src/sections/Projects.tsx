@@ -63,7 +63,7 @@ function Projects() {
   
 
   return (
-    <FullPageContainer>
+    <div className="my-44">
       <div className="-mb-32">
         <Title>Projects</Title>
         <div ref={projectsRef}>
@@ -78,7 +78,7 @@ function Projects() {
           </div>
         </div>
       </div>
-    </FullPageContainer>
+    </div>
   )
 }
 

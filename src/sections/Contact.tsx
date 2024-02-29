@@ -16,7 +16,7 @@ function Contact () {
   const contactRef = useRef<HTMLDivElement>(null)
   const isOnScreen = useOnScreen({
     ref: contactRef,
-    observerOptions: { rootMargin: '130px' },
+    observerOptions: { rootMargin: '500px' },
     triggerOnce: true
   })
   const {isMobile} = useWidth()
@@ -36,7 +36,7 @@ function Contact () {
   const contactList: ContactItem[] = [
     {
       icon: 'Linkedin',
-      href: 'https://www.linkedin.com/in/rodolfo-dassaev-tagle-mesta-75471620a/'
+      href: 'https://www.linkedin.com/in/dassaev-tagle/'
     },
     {
       icon: 'Codepen',
